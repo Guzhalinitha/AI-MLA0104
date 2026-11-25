@@ -1,0 +1,19 @@
+# 19. Planet Knowledge Representation
+
+planets = {
+    "Mercury": "Smallest planet",
+    "Venus": "Hottest planet",
+    "Earth": "Planet with life",
+    "Mars": "Red planet",
+    "Jupiter": "Largest planet",
+    "Saturn": "Planet with rings",
+    "Uranus": "Ice giant",
+    "Neptune": "Farthest planet from the Sun"
+}
+
+planet = input("Enter planet name: ").title()
+
+if planet in planets:
+    print(planet, ":", planets[planet])
+else:
+    print("Planet not found")
