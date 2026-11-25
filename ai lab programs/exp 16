@@ -1,0 +1,20 @@
+# 16. Birds Fly Knowledge Base
+
+birds = {
+    "Parrot": True,
+    "Sparrow": True,
+    "Penguin": False,
+    "Ostrich": False
+}
+
+def can_fly(bird):
+    if bird in birds:
+        if birds[bird]:
+            print(bird, "can fly")
+        else:
+            print(bird, "cannot fly")
+    else:
+        print("Bird not found")
+
+can_fly("Parrot")
+can_fly("Penguin")
