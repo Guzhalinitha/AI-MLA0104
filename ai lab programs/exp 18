@@ -1,0 +1,14 @@
+# 18. Fruit Color Classification
+
+color = input("Enter fruit color: ").lower()
+
+if color == "red":
+    print("Fruit: Apple")
+elif color == "yellow":
+    print("Fruit: Banana")
+elif color == "orange":
+    print("Fruit: Orange")
+elif color == "green":
+    print("Fruit: Green Apple")
+else:
+    print("Fruit not identified")
