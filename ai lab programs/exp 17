@@ -1,0 +1,12 @@
+# 17. Medical Expert System
+
+symptoms = input("Enter symptoms separated by commas: ").lower()
+
+if "fever" in symptoms and "cough" in symptoms:
+    print("Possible Disease: Flu")
+elif "fever" in symptoms and "headache" in symptoms:
+    print("Possible Disease: Viral Fever")
+elif "sneezing" in symptoms and "runny nose" in symptoms:
+    print("Possible Disease: Common Cold")
+else:
+    print("Disease not identified")
