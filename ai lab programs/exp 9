@@ -1,0 +1,41 @@
+# 9. Water Jug Problem
+
+from collections import deque
+
+def water_jug(cap1, cap2, target):
+    queue = deque([(0, 0, [])])
+    visited = set()
+
+    while queue:
+        x, y, path = queue.popleft()
+
+        if (x, y) in visited:
+            continue
+
+        visited.add((x, y))
+        path = path + [(x, y)]
+
+        if x == target or y == target:
+            return path
+
+        states = [
+            (cap1, y), (x, cap2),
+            (0, y), (x, 0),
+            (x - min(x, cap2 - y), y + min(x, cap2 - y)),
+            (x + min(y, cap1 - x), y - min(y, cap1 - x))
+        ]
+
+        for state in states:
+            if state not in visited:
+                queue.append((*state, path))
+
+    return None
+
+
+result = water_jug(4, 3, 2)
+
+if result:
+    for step in result:
+        print(step)
+else:
+    print("Solution not possible")
