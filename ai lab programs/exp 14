@@ -1,0 +1,20 @@
+# 14. Diet Recommendation Expert System
+
+age = int(input("Enter age: "))
+bmi = float(input("Enter BMI: "))
+condition = input("Enter health condition: ").lower()
+
+if bmi < 18.5:
+    diet = "High-calorie nutritious diet"
+elif bmi < 25:
+    diet = "Balanced healthy diet"
+else:
+    diet = "Weight management diet"
+
+if condition == "diabetes":
+    diet = "Low-sugar balanced diet"
+elif condition == "hypertension":
+    diet = "Low-salt healthy diet"
+
+print("Age:", age)
+print("Recommended Diet:", diet)
