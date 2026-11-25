@@ -1,0 +1,22 @@
+# 21. Pattern Recognition
+
+import cv2
+
+# Load image
+image = cv2.imread("image.jpg")
+
+if image is None:
+    print("Image not found")
+else:
+    # Convert to grayscale
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Detect edges
+    edges = cv2.Canny(gray, 100, 200)
+
+    # Display results
+    cv2.imshow("Original Image", image)
+    cv2.imshow("Detected Patterns", edges)
+
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
