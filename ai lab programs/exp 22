@@ -1,0 +1,19 @@
+# 22. Monkey and Banana Problem
+
+def monkey_banana():
+    state = "door"
+
+    print("Monkey is at the", state)
+
+    state = "window"
+    print("Monkey moves to the", state)
+
+    state = "middle"
+    print("Monkey moves to the", state)
+
+    print("Monkey pushes the box to the middle")
+    print("Monkey climbs onto the box")
+    print("Monkey grabs the banana")
+    print("Monkey eats the banana")
+
+monkey_banana()
