@@ -1,0 +1,20 @@
+# 15. Family Knowledge Representation
+
+family = {
+    "John": {"Mary", "David"},
+    "Mary": {"Alice", "Bob"}
+}
+
+def parent(person):
+    for p, children in family.items():
+        if person in children:
+            print(p, "is the parent of", person)
+
+def grandparent(person):
+    for p, children in family.items():
+        for child in children:
+            if person in family.get(child, set()):
+                print(p, "is the grandparent of", person)
+
+parent("Alice")
+grandparent("Alice")
